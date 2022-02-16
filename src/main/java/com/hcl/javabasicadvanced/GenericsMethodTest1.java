@@ -1,6 +1,6 @@
 package com.hcl.javabasicadvanced;
 
-class GenericsExample<T> {
+class GenericsMethodTest1<T> {
 	private T obj1;
 
 	public void add(T obj1) {
@@ -12,8 +12,8 @@ class GenericsExample<T> {
 	}
 
 	public static void main(String[] args) {
-		GenericsExample<Integer> integercontainer = new GenericsExample<Integer>();
-		GenericsExample<String> stringcontainer = new GenericsExample<String>();
+		GenericsMethodTest1<Integer> integercontainer = new GenericsMethodTest1<Integer>();
+		GenericsMethodTest1<String> stringcontainer = new GenericsMethodTest1<String>();
 
 		integercontainer.add(new Integer(7));
 		stringcontainer.add(new String("You are awesome"));
