@@ -1,7 +1,5 @@
 package com.hcl.javabasicadvanced.exceptions;
 
-import com.hcl.javabasicadvanced.collection.MyException;
-
 class MyExceptionDemo{
 	static int flag=0;
 	public static void main(String args[]) {

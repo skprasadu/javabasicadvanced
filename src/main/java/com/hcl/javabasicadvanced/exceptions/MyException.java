@@ -1,4 +1,4 @@
-package com.hcl.javabasicadvanced.collection;
+package com.hcl.javabasicadvanced.exceptions;
 
 public class MyException extends Exception {
     public MyException() {

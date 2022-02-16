@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 import com.hcl.javabasicadvanced.model.Book;
 
-public class MapExample2 {
+public class MapExampleWithBookObject {
     public static void main(String[] args) {
         //Creating map of Books
         Map<Integer, Book> map = new TreeMap<Integer, Book>();

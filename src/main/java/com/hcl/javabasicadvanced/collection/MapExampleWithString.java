@@ -3,7 +3,7 @@ package com.hcl.javabasicadvanced.collection;
 
 import java.util.*;
 
-public class MapExample1 {
+public class MapExampleWithString {
     public static void main(String[] args) {
         Map map = new HashMap();
         //InterfaceName obj=new ClassName();
