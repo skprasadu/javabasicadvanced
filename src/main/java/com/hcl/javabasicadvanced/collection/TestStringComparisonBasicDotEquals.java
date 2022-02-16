@@ -1,5 +1,5 @@
 package com.hcl.javabasicadvanced.collection;
-class Teststringcomparison1 {
+class TestStringComparisonBasicDotEquals {
 	public static void main(String args[]) {
 		String s1 = "Sachin";
 		String s2 = "Sachin";
