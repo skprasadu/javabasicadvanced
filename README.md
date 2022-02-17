@@ -1,1 +1,2 @@
-## Exceptions
+## Immutable
+
