@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 /**
  * Update PreparedStatement JDBC Example
- * @author Ramesh Fadatare
  *
+ * @author Ramesh Fadatare
  */
 public class UpdatePStatementExample {
 
@@ -23,8 +23,8 @@ public class UpdatePStatementExample {
         System.out.println(UPDATE_USERS_SQL);
         // Step 1: Establishing a Connection
         try (Connection connection = JDBCUtils.getConnection();
-            // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)) {
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)) {
             preparedStatement.setString(1, "Kemet");
             preparedStatement.setInt(2, 1);
 
@@ -33,7 +33,7 @@ public class UpdatePStatementExample {
         } catch (SQLException e) {
 
             // print SQL exception information
-        	JDBCUtils.printSQLException(e);
+            JDBCUtils.printSQLException(e);
         }
 
         // Step 4: try-with-resource statement will auto close the connection.

@@ -1,1 +1,3 @@
-## Comprable_comprator
+## CRUD
+Need to establish a connection with local DB
+
