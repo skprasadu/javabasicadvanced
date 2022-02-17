@@ -12,8 +12,8 @@ import java.util.logging.Logger;
 
 /**
  * Class demonstrate Inserting Image into MySQL Database using Java
- * @author Ramesh Fadatare
  *
+ * @author Ramesh Fadatare
  */
 public class JdbcWriteImage {
 
@@ -25,8 +25,8 @@ public class JdbcWriteImage {
 
         String sql = "INSERT INTO Images(Data) VALUES(?)";
 
-        try (Connection con = DriverManager.getConnection(url, user, password); 
-        		PreparedStatement pst = con.prepareStatement(sql)) {
+        try (Connection con = DriverManager.getConnection(url, user, password);
+             PreparedStatement pst = con.prepareStatement(sql)) {
 
             File myFile = new File("image.png");
             try (FileInputStream fin = new FileInputStream(myFile)) {
@@ -44,7 +44,7 @@ public class JdbcWriteImage {
             Logger lgr = Logger.getLogger(JdbcWriteImage.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
-        
+
         System.out.println("Image inserted successfully....");
     }
 }

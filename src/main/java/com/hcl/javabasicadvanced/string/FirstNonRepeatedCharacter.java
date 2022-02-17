@@ -1,4 +1,4 @@
-package com.hcl.javabasicadvanced.jdbc;
+package com.hcl.javabasicadvanced.string;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

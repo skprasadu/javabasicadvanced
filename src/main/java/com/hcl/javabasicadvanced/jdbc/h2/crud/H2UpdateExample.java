@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 /**
  * Update PreparedStatement JDBC Example
- * @author Ramesh Fadatare
  *
+ * @author Ramesh Fadatare
  */
 public class H2UpdateExample {
 
@@ -23,8 +23,8 @@ public class H2UpdateExample {
         System.out.println(UPDATE_USERS_SQL);
         // Step 1: Establishing a Connection
         try (Connection connection = H2JDBCUtils.getConnection();
-            // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)) {
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)) {
             preparedStatement.setString(1, "Ram");
             preparedStatement.setInt(2, 1);
 
@@ -33,7 +33,7 @@ public class H2UpdateExample {
         } catch (SQLException e) {
 
             // print SQL exception information
-        	H2JDBCUtils.printSQLException(e);
+            H2JDBCUtils.printSQLException(e);
         }
 
         // Step 4: try-with-resource statement will auto close the connection.

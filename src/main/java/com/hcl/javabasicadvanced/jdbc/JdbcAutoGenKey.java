@@ -21,8 +21,8 @@ public class JdbcAutoGenKey {
         String sql = "INSERT INTO Students(Name) VALUES(?)";
 
         try (Connection con = DriverManager.getConnection(url, user, password);
-                PreparedStatement preparedStatement = con.prepareStatement(sql,
-                        Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement preparedStatement = con.prepareStatement(sql,
+                     Statement.RETURN_GENERATED_KEYS)) {
 
             preparedStatement.setString(1, studentName);
             preparedStatement.executeUpdate();
