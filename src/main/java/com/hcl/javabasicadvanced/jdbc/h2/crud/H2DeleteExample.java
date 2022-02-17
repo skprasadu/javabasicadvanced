@@ -18,7 +18,7 @@ public class H2DeleteExample {
         // Step 1: Establishing a Connection
         try (Connection connection = H2JDBCUtils.getConnection();
              // Step 2:Create a statement using connection object
-             Statement statement = connection.createStatement();) {
+             Statement statement = connection.createStatement()) {
 
             // Step 3: Execute the query or update query
             statement.execute(deleteTableSQL);

@@ -1,7 +1,7 @@
 package com.hcl.javabasicadvanced.string;
 
 public class StringOperationToLowerCaseAndToUpperCase {
-    public static void main(String ar[]) {
+    public static void main(String[] ar) {
         String s = "Sachin";
         System.out.println(s.toUpperCase());//SACHIN
         System.out.println(s.toLowerCase());//sachin

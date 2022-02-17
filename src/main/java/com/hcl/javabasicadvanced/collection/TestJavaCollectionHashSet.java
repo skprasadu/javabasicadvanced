@@ -3,7 +3,7 @@ package com.hcl.javabasicadvanced.collection;
 import java.util.*;
 
 public class TestJavaCollectionHashSet {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         //Creating HashSet and adding elements
         HashSet<String> set = new HashSet<String>();
         set.add("Ravi");

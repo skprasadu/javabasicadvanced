@@ -15,7 +15,7 @@ class StudentToStringMethod {
         return rollno + " " + name + " " + city;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         StudentToStringMethod s1 = new StudentToStringMethod(101, "Raj", "lucknow");
         StudentToStringMethod s2 = new StudentToStringMethod(102, "Vijay", "ghaziabad");
 
