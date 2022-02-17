@@ -1,11 +1,11 @@
 package com.hcl.javabasicadvanced;
 
-import com.hcl.javabasicadvanced.model.Employee;
+import com.hcl.javabasicadvanced.model.EmployeeImplComparable;
 
 public class EmployeeGetAndSetTest {
 
 	public static void main(String args[]) {
-		Employee e = new Employee();
+		EmployeeImplComparable e = new EmployeeImplComparable();
 		e.setName("Shweta");
 		System.out.println(e.getName());
 	}
