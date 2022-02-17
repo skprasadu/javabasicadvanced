@@ -1,7 +1,7 @@
 package com.hcl.javabasicadvanced.string;
 
 class StringBufferCapacity {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         StringBuffer sb = new StringBuffer();
         System.out.println(sb.capacity());//default 16
         sb.append("Hello");

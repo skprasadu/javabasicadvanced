@@ -21,7 +21,7 @@ public class SelectPStatementExample {
         try (Connection connection = JDBCUtils.getConnection();
 
              // Step 2:Create a statement using connection object
-             PreparedStatement preparedStatement = connection.prepareStatement(QUERY)) {
+             PreparedStatement preparedStatement = connection.prepareStatement(QUERY);) {
             preparedStatement.setInt(1, 2);
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query

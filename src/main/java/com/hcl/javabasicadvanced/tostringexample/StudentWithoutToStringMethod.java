@@ -11,7 +11,7 @@ class StudentWithoutToStringMethod {
         this.city = city;
     }
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         StudentWithoutToStringMethod s1 = new StudentWithoutToStringMethod(101, "Raj", "lucknow");
         StudentWithoutToStringMethod s2 = new StudentWithoutToStringMethod(102, "Vijay", "ghaziabad");
 

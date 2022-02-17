@@ -2,9 +2,9 @@ package com.hcl.javabasicadvanced.movie;
 
 //A class 'Movie' that implements Comparable
 public class MovieImplComparable implements Comparable<MovieImplComparable> {
-    private final double rating;
-    private final String name;
-    private final int year;
+    private double rating;
+    private String name;
+    private int year;
 
     // Used to sort movies by year
     public int compareTo(MovieImplComparable m) {

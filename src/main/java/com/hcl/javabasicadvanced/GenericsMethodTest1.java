@@ -16,7 +16,7 @@ class GenericsMethodTest1<T> {
         GenericsMethodTest1<String> stringcontainer = new GenericsMethodTest1<String>();
 
         integercontainer.add(new Integer(7));
-        stringcontainer.add("You are awesome");
+        stringcontainer.add(new String("You are awesome"));
 
         System.out.printf("Integer Value :%d\n\n", integercontainer.get());
         System.out.printf("String Value :%s\n", stringcontainer.get());

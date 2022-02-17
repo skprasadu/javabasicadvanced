@@ -6,7 +6,7 @@ import java.io.FileReader;
 
 public class FileNotFoundExceptionDemo {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         File file = new File("./file.txt");
         try {
             FileReader fr = new FileReader(file);

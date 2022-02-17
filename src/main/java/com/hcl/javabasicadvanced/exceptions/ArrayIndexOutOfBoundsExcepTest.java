@@ -2,8 +2,8 @@ package com.hcl.javabasicadvanced.exceptions;
 
 public class ArrayIndexOutOfBoundsExcepTest {
 
-    public static void main(String[] args) {
-        int[] a = new int[2];
+    public static void main(String args[]) {
+        int a[] = new int[2];
         try {
             System.out.println("Access element three :" + a[3]);
         } catch (ArrayIndexOutOfBoundsException e) {

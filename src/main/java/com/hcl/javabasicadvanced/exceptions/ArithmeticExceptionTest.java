@@ -1,7 +1,7 @@
 package com.hcl.javabasicadvanced.exceptions;
 
 public class ArithmeticExceptionTest {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         try {
             //code that may raise exception
             int data = 100 / 0;

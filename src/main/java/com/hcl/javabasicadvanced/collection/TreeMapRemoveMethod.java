@@ -3,7 +3,7 @@ package com.hcl.javabasicadvanced.collection;
 import java.util.*;
 
 public class TreeMapRemoveMethod {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         TreeMap<Integer, String> map = new TreeMap<Integer, String>();
         map.put(100, "Amit");
         map.put(102, "Ravi");

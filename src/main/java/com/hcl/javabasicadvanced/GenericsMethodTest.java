@@ -10,7 +10,7 @@ class GenericsMethodTest {
         System.out.println();
     }
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         // Create arrays of Integer, Double and Character
         Integer[] integerArray = {5, 4, 3, 2, 1};
         Double[] doubleArray = {1.21, 22.12, 13.32};

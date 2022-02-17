@@ -3,7 +3,7 @@ package com.hcl.javabasicadvanced.collection;
 import java.util.*;
 
 public class TestJavaCollectionTreeSet {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         //Creating and adding elements
         TreeSet<String> set = new TreeSet<String>();
         set.add("Ravi");

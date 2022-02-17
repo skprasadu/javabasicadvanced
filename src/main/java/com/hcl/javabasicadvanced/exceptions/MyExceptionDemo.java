@@ -3,7 +3,7 @@ package com.hcl.javabasicadvanced.exceptions;
 class MyExceptionDemo {
     static int flag = 0;
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         try {
             int age = 14;
             if (age < 18)
