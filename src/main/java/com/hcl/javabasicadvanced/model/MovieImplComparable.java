@@ -1,4 +1,4 @@
-package com.hcl.javabasicadvanced.movie;
+package com.hcl.javabasicadvanced.model;
 
 //A class 'Movie' that implements Comparable
 public class MovieImplComparable implements Comparable<MovieImplComparable> {

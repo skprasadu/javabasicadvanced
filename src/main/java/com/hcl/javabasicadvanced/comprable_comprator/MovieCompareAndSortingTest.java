@@ -1,8 +1,10 @@
-package com.hcl.javabasicadvanced.movie;
+package com.hcl.javabasicadvanced.comprable_comprator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
+import com.hcl.javabasicadvanced.model.MovieImplComparable;
 
 //Driver class
 public class MovieCompareAndSortingTest {
@@ -17,7 +19,7 @@ public class MovieCompareAndSortingTest {
         // (2) Call Collections.sort
         // (3) Print Sorted list
         System.out.println("Sorted by rating");
-        RatingCompare ratingCompare = new RatingCompare();
+        RatingCompare1 ratingCompare = new RatingCompare1();
         Collections.sort(list, ratingCompare);
         for (MovieImplComparable movie : list)
             System.out.println(movie.getRating() + " " + movie.getName() + " " + movie.getYear());
@@ -25,7 +27,7 @@ public class MovieCompareAndSortingTest {
         // Call overloaded sort method with RatingCompare
         // (Same three steps as above)
         System.out.println("\nSorted by name");
-        NameCompare nameCompare = new NameCompare();
+        NameCompare1 nameCompare = new NameCompare1();
         Collections.sort(list, nameCompare);
         for (MovieImplComparable movie : list)
             System.out.println(movie.getName() + " " + movie.getRating() + " " + movie.getYear());
@@ -38,21 +40,3 @@ public class MovieCompareAndSortingTest {
     }
 }
 
-//Class to compare Movies by ratings
-class RatingCompare implements Comparator<MovieImplComparable> {
-    public int compare(MovieImplComparable m1, MovieImplComparable m2) {
-        if (m1.getRating() < m2.getRating())
-            return -1;
-        if (m1.getRating() > m2.getRating())
-            return 1;
-        else
-            return 0;
-    }
-}
-
-//Class to compare Movies by name
-class NameCompare implements Comparator<MovieImplComparable> {
-    public int compare(MovieImplComparable m1, MovieImplComparable m2) {
-        return m1.getName().compareTo(m2.getName());
-    }
-}

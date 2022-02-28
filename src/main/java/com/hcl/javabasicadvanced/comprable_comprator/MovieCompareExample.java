@@ -19,7 +19,7 @@ public class MovieCompareExample {
 		// (2) Call Collections.sort
 		// (3) Print Sorted list
 		System.out.println("Sorted by rating");
-		RatingCompare ratingCompare = new RatingCompare();
+		RatingCompare2 ratingCompare = new RatingCompare2();
 		Collections.sort(list, ratingCompare);
 		for (Movie movie : list)
 			System.out.println(movie.getRating() + " " + movie.getName() + " " + movie.getYear());
@@ -27,7 +27,7 @@ public class MovieCompareExample {
 		// Call overloaded sort method with RatingCompare
 		// (Same three steps as above)
 		System.out.println("\nSorted by name");
-		NameCompare nameCompare = new NameCompare();
+		NameCompare2 nameCompare = new NameCompare2();
 		Collections.sort(list, nameCompare);
 		for (Movie movie : list)
 			System.out.println(movie.getName() + " " + movie.getRating() + " " + movie.getYear());
@@ -40,21 +40,4 @@ public class MovieCompareExample {
 	}
 }
 
-//Class to compare Movies by ratings
-class RatingCompare implements Comparator<Movie> {
-	public int compare(Movie m1, Movie m2) {
-		if (m1.getRating() < m2.getRating())
-			return -1;
-		if (m1.getRating() > m2.getRating())
-			return 1;
-		else
-			return 0;
-	}
-}
 
-//Class to compare Movies by name
-class NameCompare implements Comparator<Movie> {
-	public int compare(Movie m1, Movie m2) {
-		return m1.getName().compareTo(m2.getName());
-	}
-}

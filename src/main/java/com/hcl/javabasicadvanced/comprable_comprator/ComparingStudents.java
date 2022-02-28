@@ -1,14 +1,17 @@
-package com.hcl.javabasicadvanced.student;
+package com.hcl.javabasicadvanced.comprable_comprator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
-class ComparingStudents {
+import com.hcl.javabasicadvanced.model.Student;
+
+public class ComparingStudents {
     public static void main(String[] args) {
         ArrayList<Student> ar = new ArrayList<Student>();
-        ar.add(new Student(570, "abdhul", "london"));
-        ar.add(new Student(561, "arjun", "nyc"));
-        ar.add(new Student(588, "vinnie", "jaipur"));
+        ar.add(new Student(570, "abdhul", 24));
+        ar.add(new Student(561, "arjun", 26));
+        ar.add(new Student(588, "vinnie", 45));
         System.out.println("Unsorted");
         for (int i = 0; i < ar.size(); i++)
             System.out.println(ar.get(i));
@@ -24,3 +27,4 @@ class ComparingStudents {
             System.out.println(ar.get(i));
     }
 }
+

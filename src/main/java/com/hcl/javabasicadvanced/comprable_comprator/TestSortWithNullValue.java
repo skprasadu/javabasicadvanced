@@ -2,6 +2,8 @@ package com.hcl.javabasicadvanced.comprable_comprator;
 
 import java.util.*;
 
+import com.hcl.javabasicadvanced.model.Student;
+
 public class TestSortWithNullValue {
     public static void main(String args[]) {
         ArrayList<Student> al = new ArrayList<Student>();
@@ -12,13 +14,13 @@ public class TestSortWithNullValue {
         Collections.sort(al, cm1);
         System.out.println("Considers null to be less than non-null");
         for (Student st : al) {
-            System.out.println(st.rollno + " " + st.name + " " + st.age);
+            System.out.println(st.getRollno() + " " + st.getName() + " " + st.getAge());
         }
         Comparator<Student> cm2 = Comparator.comparing(Student::getName, Comparator.nullsLast(String::compareTo));
         Collections.sort(al, cm2);
         System.out.println("Considers null to be greater than non-null");
         for (Student st : al) {
-            System.out.println(st.rollno + " " + st.name + " " + st.age);
+            System.out.println(st.getRollno() + " " + st.getName() + " " + st.getAge());
         }
     }
 }

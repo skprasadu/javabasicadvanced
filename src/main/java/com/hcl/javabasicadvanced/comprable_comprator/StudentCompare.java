@@ -28,14 +28,3 @@ public class StudentCompare {
 	}
 }
 
-class Sortbyid implements Comparator<Student> {
-	public int compare(Student a, Student b) {
-		return a.getRollno() - b.getRollno();
-	}
-}
-
-class Sortbyname implements Comparator<Student> {
-	public int compare(Student a, Student b) {
-		return a.getName().compareTo(b.getName());
-	}
-}
