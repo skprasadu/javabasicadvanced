@@ -7,9 +7,8 @@ import java.sql.SQLException;
 
 /**
  * Select PreparedStatement JDBC Example
- * 
- * @author Ramesh Fadatare
  *
+ * @author Ramesh Fadatare
  */
 public class H2SelectExample {
     private static final String QUERY = "select id,name,email,country,password from users where id =?";
@@ -21,8 +20,8 @@ public class H2SelectExample {
         // Step 1: Establishing a Connection
         try (Connection connection = H2JDBCUtils.getConnection();
 
-            // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(QUERY);) {
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(QUERY);) {
             preparedStatement.setInt(1, 1);
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query
@@ -38,7 +37,7 @@ public class H2SelectExample {
                 System.out.println(id + "," + name + "," + email + "," + country + "," + password);
             }
         } catch (SQLException e) {
-        	H2JDBCUtils.printSQLException(e);
+            H2JDBCUtils.printSQLException(e);
         }
         // Step 4: try-with-resource statement will auto close the connection.
     }

@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 
 /**
  * Retrieve Image from MySQL Database Table using Java
- * @author Ramesh Fadatare
  *
+ * @author Ramesh Fadatare
  */
 public class JdbcReadImage {
 
