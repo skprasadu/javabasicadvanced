@@ -2,6 +2,8 @@ package com.hcl.javabasicadvanced.comprable_comprator;
 
 import java.util.*;
 
+import com.hcl.javabasicadvanced.model.Student;
+
 public class TestSort3 {
 	public static void main(String args[]) {
 		ArrayList<Student> al = new ArrayList<Student>();
@@ -12,14 +14,14 @@ public class TestSort3 {
 		Collections.sort(al, cm1);
 		System.out.println("Sorting by Name");
 		for (Student st : al) {
-			System.out.println(st.rollno + " " + st.name + " " + st.age);
+			System.out.println(st.getRollno() + " " + st.getName() + " " + st.getAge());
 		}
 		// Sorting elements on the basis of age
 		Comparator<Student> cm2 = Comparator.comparing(Student::getAge);
 		Collections.sort(al, cm2);
 		System.out.println("Sorting by Age");
 		for (Student st : al) {
-			System.out.println(st.rollno + " " + st.name + " " + st.age);
+			System.out.println(st.getRollno() + " " + st.getName() + " " + st.getAge());
 		}
 	}
 }
