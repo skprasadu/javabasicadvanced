@@ -2,25 +2,35 @@ package com.hcl.javabasicadvanced.collection.map;
 
 
 import java.util.*;
+import java.util.Map.Entry;
 
 public class MapExampleWithString {
     public static void main(String[] args) {
-        Map map = new HashMap();
+        Map<String, String> map = new HashMap<>();
         //InterfaceName obj=new ClassName();
         //Adding elements to map
-        map.put(1, "Amit");
-        map.put(5, "Rahul");
-        map.put(2, "Jai");
-        map.put(6, "Amit");
-        map.put(7, "Jason");
+        map.put("India", "Amit");
+        map.put("America", "Rahul");
+        map.put("China", "Jai");
+        map.put("Japan", "Amit");
+        map.put("UK", "Jason");
         //Traversing Map
-        Set set = map.entrySet();//Converting to Set so that we can traverse
-        Iterator itr = set.iterator();
+        Set<Map.Entry<String, String>> set = map.entrySet();//Converting to Set so that we can traverse
+        Iterator<Entry<String, String>> itr = set.iterator();
         while (itr.hasNext()) {
             //Converting to Map.Entry so that we can get key and value separately
-            Map.Entry entry = (Map.Entry) itr.next();
+            Map.Entry<String, String> entry =  itr.next();
             System.out.println(entry.getKey() + " " + entry.getValue());
             //   System.out.println(entry.getValue());
         }
+        
+        //Always map.get is O(1)
+        System.out.println("Element UK is accessed with value " + map.get("UK"));
+        
+        map.put("Japan", "Krishna");
+        map.put("Korea", "Kartik");
+        
+        System.out.println("Element UK is accessed with value " + map.get("Japan"));
+        
     }
 }  

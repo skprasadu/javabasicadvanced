@@ -7,14 +7,14 @@ public class MatchingBraces {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println(bracesMarched("{{}{}{}}")); // Should return true
-		System.out.println(bracesMarched("}{}{}{}{")); // Should return false
-		System.out.println(bracesMarched("{}{}{}{")); // Should return false
-		System.out.println(bracesMarched("{}}{{}"));
-		System.out.println(bracesMarched("{{{{}}}{}{}}")); // Should return true
+		System.out.println(bracesMatched("{{}{}{}}")); // Should return true
+		System.out.println(bracesMatched("}{}{}{}{")); // Should return false
+		System.out.println(bracesMatched("{}{}{}{")); // Should return false
+		System.out.println(bracesMatched("{}}{{}")); //Should return false
+		System.out.println(bracesMatched("{{{{}}}{}{}}")); // Should return true
 	}
 
-	private static boolean bracesMarched(String string) {
+	private static boolean bracesMatched(String string) {
 		// TODO Auto-generated method stub
 		// ArrayList or HashMap or Stack or Queue
 		// Do we need a datastrucure at all??

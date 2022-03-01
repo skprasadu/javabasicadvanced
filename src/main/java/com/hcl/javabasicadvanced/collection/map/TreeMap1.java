@@ -4,14 +4,19 @@ import java.util.*;
 
 class TreeMap1 {
     public static void main(String args[]) {
-        TreeMap<Integer, String> map = new TreeMap<Integer, String>();
-        map.put(100, "Amit");
-        map.put(102, "Ravi");
-        map.put(101, "Vijay");
-        map.put(103, "Rahul");
+        TreeMap<String, String> map = new TreeMap<String, String>();
+        map.put("India", "Amit");
+        map.put("America", "Ravi");
+        map.put("Singapore", "Vijay");
+        map.put("Hong Kong", "Rahul");
+        map.put("Hong Kong", "Krishna");
 
         for (Map.Entry m : map.entrySet()) {
             System.out.println(m.getKey() + " " + m.getValue());
         }
+        
+        System.out.println("Element UK is accessed with value " + map.get("Hong Kong"));
+
+        
     }
 }  
