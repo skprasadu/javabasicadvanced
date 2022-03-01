@@ -23,5 +23,7 @@ public class TestJavaCollectionTreeSet {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
+        
+        System.out.println("Set Contains Ravi " + set.contains("Alex"));
     }
 }  

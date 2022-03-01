@@ -15,5 +15,8 @@ public class TestJavaCollectionHashSet {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
+        
+        System.out.println("Set Contains Ajay " + set.contains("Ajay"));
+
     }
 }  
