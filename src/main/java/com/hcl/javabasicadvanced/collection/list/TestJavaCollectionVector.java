@@ -13,5 +13,7 @@ public class TestJavaCollectionVector {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
+        
+        System.out.println("Index 3 " + v.get(3) );
     }
 }
