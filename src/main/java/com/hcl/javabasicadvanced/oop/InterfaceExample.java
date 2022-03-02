@@ -3,15 +3,27 @@ package com.hcl.javabasicadvanced.oop;
 public class InterfaceExample {
 
 	public static void main(String[] args) {
-		 MacBookAir mba = new MacBookAir();
+		 Computer mba = new MacBookAir();
 		 
 		 if(mba instanceof Printable) {
-			 ((Printable)mba).print();
+			System.out.println(((Printable)mba).print());
 		 }
 
 		 if(mba instanceof Drawable) {
-			 
+			 System.out.println(((Drawable)mba).draw());
 		 }
+		 
+		 System.out.println("********************");
+		 mba = new Surface();
+		 if(mba instanceof Printable) {
+			System.out.println(((Printable)mba).print());
+		 }
+
+		 if(mba instanceof Drawable) {
+			 System.out.println(((Drawable)mba).draw());
+		 }
+
+
 	}
 
 }
@@ -36,7 +48,11 @@ interface WiredNetwork {
 	String wiredConnect();
 }
 
-class MacBookAir implements Showable, Printable, Wifi {
+abstract class Computer {
+	abstract String type();
+}
+
+class MacBookAir extends Computer implements Showable, Printable, Wifi {
 
 
 	@Override
@@ -56,10 +72,16 @@ class MacBookAir implements Showable, Printable, Wifi {
 		// TODO Auto-generated method stub
 		return "Support latest wifiConnect";
 	}
+
+	@Override
+	String type() {
+		// TODO Auto-generated method stub
+		return "laptop";
+	}
 	
 }
 
-class Surface implements Showable, Printable, Drawable, WiredNetwork {
+class Surface extends Computer implements Showable, Printable, Drawable, WiredNetwork {
 
 
 	@Override
@@ -84,6 +106,12 @@ class Surface implements Showable, Printable, Drawable, WiredNetwork {
 	public String draw() {
 		// TODO Auto-generated method stub
 		return "Supports color draw";
+	}
+
+	@Override
+	String type() {
+		// TODO Auto-generated method stub
+		return "tablet";
 	}
 	
 }
