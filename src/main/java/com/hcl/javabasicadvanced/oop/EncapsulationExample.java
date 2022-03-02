@@ -4,6 +4,13 @@ public class EncapsulationExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Employee e = new Employee();
+		
+		e.setId(1);
+		e.setName("Krishna");
+		e.setPhone("1234567890");
+		
+		System.out.println(e.getId() + " " + e.getName() + " " + e.getPhone() );
 
 	}
 
