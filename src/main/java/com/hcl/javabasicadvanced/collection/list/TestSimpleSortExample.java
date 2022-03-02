@@ -14,9 +14,19 @@ public class TestSimpleSortExample {
 		arr.add("Margaret");
 		arr.add("Joseph");
 		arr.add("Hamilton");
+		ArrayList<String> arr1 = arr;
+		//2 references
+		{
+			ArrayList<String> arr2 = arr;
+			//3 references
+		}
+		
+		//2 references
+		System.out.println(arr1.get(0));
 		
 		//Insertion Order
 		for(String str: arr) {
+			int z = 5;
 			System.out.println("Value = " + str);
 		}
 		

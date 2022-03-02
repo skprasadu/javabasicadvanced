@@ -3,26 +3,27 @@ package com.hcl.javabasicadvanced.oop;
 public class InterfaceExample {
 
 	public static void main(String[] args) {
-		 Computer mba = new MacBookAir();
-		 
-		 if(mba instanceof Printable) {
-			System.out.println(((Printable)mba).print());
-		 }
+		Computer c = new MacBookAir();
 
-		 if(mba instanceof Drawable) {
-			 System.out.println(((Drawable)mba).draw());
-		 }
-		 
-		 System.out.println("********************");
-		 mba = new Surface();
-		 if(mba instanceof Printable) {
-			System.out.println(((Printable)mba).print());
-		 }
+		printFeature(c);
+		
+		c = new Surface();
+		printFeature(c);
 
-		 if(mba instanceof Drawable) {
-			 System.out.println(((Drawable)mba).draw());
-		 }
+	}
 
+	private static void printFeature(Computer c) {
+		// TODO Auto-generated method stub
+		System.out.println("******************** features of " + c.name());
+		
+		System.out.println(c.type());
+		if (c instanceof Printable) {
+			System.out.println(((Printable) c).print());
+		}
+
+		if (c instanceof Drawable) {
+			System.out.println(((Drawable) c).draw());
+		}
 
 	}
 
@@ -50,10 +51,10 @@ interface WiredNetwork {
 
 abstract class Computer {
 	abstract String type();
+	abstract String name();
 }
 
 class MacBookAir extends Computer implements Showable, Printable, Wifi {
-
 
 	@Override
 	public String print() {
@@ -78,11 +79,16 @@ class MacBookAir extends Computer implements Showable, Printable, Wifi {
 		// TODO Auto-generated method stub
 		return "laptop";
 	}
-	
+
+	@Override
+	String name() {
+		// TODO Auto-generated method stub
+		return "MacBookAir";
+	}
+
 }
 
 class Surface extends Computer implements Showable, Printable, Drawable, WiredNetwork {
-
 
 	@Override
 	public String print() {
@@ -113,5 +119,11 @@ class Surface extends Computer implements Showable, Printable, Drawable, WiredNe
 		// TODO Auto-generated method stub
 		return "tablet";
 	}
-	
+
+	@Override
+	String name() {
+		// TODO Auto-generated method stub
+		return "SurfacePro";
+	}
+
 }
