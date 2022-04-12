@@ -1,9 +1,10 @@
 package com.hcl.javabasicadvanced.model;
 
+//Plain old java objects (POJO)
 public class Student {
-	int rollno;
-	String name;
-	int age;
+	private int rollno;
+	private String name;
+	private int age;
 
 	public Student(int rollno, String name, int age) {
 		this.rollno = rollno;
@@ -33,6 +34,19 @@ public class Student {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return this.rollno+ this.name.hashCode()+ this.age;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		Student s = (Student) obj;
+		return s.age == age && s.rollno == rollno && s.name.equals(name);
 	}
 
 }
