@@ -7,8 +7,8 @@ public class CreatingFileTryCatchTest {
 
     public static void main(String[] args) {
 
-
-        PrintWriter pw;
+    	/* The bad version
+        PrintWriter pw = null;
         try {
             pw = new PrintWriter("jtp.txt"); //may throw exception   
             pw.println("saved");
@@ -17,7 +17,18 @@ public class CreatingFileTryCatchTest {
         catch (FileNotFoundException e) {
 
             System.out.println(e);
-        }
+        } finally {
+        	if(pw != null) {
+        		pw.close();
+        	}
+        }*/
+    	
+        try(PrintWriter pw = new PrintWriter("jtp.txt");) {
+            pw.println("saved");
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        } 
+    	
         System.out.println("File saved successfully");
     }
 }  

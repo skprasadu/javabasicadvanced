@@ -6,13 +6,13 @@ import java.io.FileReader;
 
 public class FileNotFoundExceptionDemo {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws FileNotFoundException {
         File file = new File("./file.txt");
-        try {
+        //try {
             FileReader fr = new FileReader(file);
-        } catch (FileNotFoundException e) {
+        /*} catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
+        }*/
     }
 }
