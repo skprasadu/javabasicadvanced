@@ -1,6 +1,6 @@
 package com.hcl.javabasicadvanced.string;
 
-public class StringOperationValueOf {
+public class BasicStringConcepts {
     public static void main(String ar[]) {
         /*int a = 10;
         String s = String.valueOf(a);
@@ -28,13 +28,22 @@ public class StringOperationValueOf {
         //assigned 3 times
         System.out.println("&&&& after " + st4);
         
-        //Mutable version of string, is StringBuffer
+        //Mutable version of string, is StringBuffer, this can handle multiple threads
         StringBuffer st5 = new StringBuffer(st1);
         System.out.println("&&&& before " + st5);
         for(int i = 0; i < 3; i++) {
         	st5.append( ""+i);
         } //1
         System.out.println("&&&& after " + st5);
+        
+        //Mutable version of string, is StringBuffer, this cannot handle multiple threads
+        StringBuilder st51 = new StringBuilder(st1);
+        System.out.println("&&&& before " + st51);
+        for(int i = 0; i < 3; i++) {
+        	st51.append( ""+i);
+        } //1
+        System.out.println("&&&& after " + st51);
+
         
         String st = "What is your name";
         			//st1="WWWhat is your name"
@@ -78,6 +87,7 @@ public class StringOperationValueOf {
 	  	
 	  	String fname = "Krishna";
 	  	String lname = "Prasad";
+	  	System.out.println("My Name is " + fname + " " + lname);
 	  	System.out.println(String.format("My Name is %s %s", fname, lname));
 	  	
 	  	String removeSpaces = st.replaceAll(" " , "");
