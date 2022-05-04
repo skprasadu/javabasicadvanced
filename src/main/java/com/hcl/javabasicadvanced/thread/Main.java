@@ -12,6 +12,10 @@ public class Main extends Thread {
 		
 		set.add(new Main());
 		set.add(new Main());
+		set.add(new Main());
+		set.add(new Main());
+		set.add(new Main());
+		set.add(new Main());
 		
 		for(Thread thread: set) {
 			thread.start();
@@ -25,17 +29,19 @@ public class Main extends Thread {
 		// Wait for the thread to finish
 		
 		// Update amount and print its value
-		System.out.println("Main: " + amount);
+		System.out.println("&&&&&Main: " + amount);
 		amount++;
-		System.out.println("Main: " + amount);
+		System.out.println("&&&&&Main: " + amount);
 	}
 
 	public void run() {
 		amount++;
 		try {
 			System.out.println("Thread started " + this.getId());
+			System.out.println("amount value before sleep" + amount);
 			Thread.sleep(2);
 			System.out.println("Thread ended " + this.getId());
+			System.out.println("amount value after sleep" + amount);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
